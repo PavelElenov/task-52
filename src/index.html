@@ -9,10 +9,20 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
+  <body onclick="addArticles()">
     <div class="main">
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
     </div>
   </body>
+  <script>
+    function addArticles(){
+      for(let i = 0; i < 5; i++){
+        let article = document.createElement("article");
+        article.textContent = `This is ${i+1} article`;
+        article.classList.add("message");
+        document.querySelector("body").appendChild(article); 
+      }
+    }
+  </script>
 </html>
